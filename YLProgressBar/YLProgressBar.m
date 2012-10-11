@@ -280,7 +280,7 @@
         {
             CGRect fillRect = CGRectMake(rect.origin.x, rect.origin.y + floorf(rect.size.height / 2), rect.size.width, floorf(rect.size.height / 2));
             
-            const CGFloat glossDropShadowComponents[] = {0.0f, 0.0f, 0.0f, 0.56f, 0.0f, 0.0f, 0.0f, 0.0f};
+            const CGFloat glossDropShadowComponents[] = {0.0f, 0.0f, 0.0f, 0.16f, 0.0f, 0.0f, 0.0f, 0.0f};
             CGColorRef glossDropShadowColor = CGColorCreate(colorSpace, glossDropShadowComponents);
             
             CGContextSaveGState(context);
