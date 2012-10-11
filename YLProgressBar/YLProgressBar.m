@@ -125,9 +125,9 @@
     SAFE_ARC_RELEASE(_progressTintColor);
     _progressTintColor = SAFE_ARC_RETAIN(aProgressTintColor);
     const CGFloat* components = CGColorGetComponents(_progressTintColor.CGColor);
-    _progressTintColorDark = SAFE_ARC_RETAIN([UIColor colorWithRed:components[0] / 4.0f
-                                                             green:components[1] / 4.0f
-                                                              blue:components[2] / 4.0f
+    _progressTintColorDark = SAFE_ARC_RETAIN([UIColor colorWithRed:components[0] / 1.5f
+                                                             green:components[1] / 1.5f
+                                                              blue:components[2] / 1.5f
                                                              alpha:CGColorGetAlpha(_progressTintColor.CGColor)]);
 }
 
@@ -239,7 +239,7 @@
 
 //        size_t num_locations            = 2;
         CGFloat locations[]             = {0.0, 1.0};
-        CFArrayRef colors = (CFArrayRef) [NSArray arrayWithObjects:(id)_progressTintColorDark.CGColor,
+        CFArrayRef colors = (__bridge CFArrayRef) [NSArray arrayWithObjects:(id)_progressTintColorDark.CGColor,
                                           (id)self.progressTintColor.CGColor, 
                                           nil];
         
