@@ -105,7 +105,7 @@
     self.progressOffset = (self.progressOffset > 2 * YLProgressBarSizeStripeWidth - 1) ? 0 : ++self.progressOffset;
     
     // Draw the background track
-    [self drawBackgroundWithRect:rect];
+    // [self drawBackgroundWithRect:rect];
     
     if (self.progress > 0)
     {
